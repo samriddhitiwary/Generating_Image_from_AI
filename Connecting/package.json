@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@next/font": "13.4.13",
+    "ai-image-art": "file:",
     "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",

@@ -6,4 +6,4 @@ router.get("/:userId", getUserController);
 router.put("/update/:userId", updateUserController);
 router.put("/credit/:userId", buyCredit);
 
-module.export = router;
+module.exports = router;

@@ -242,6 +242,6 @@ module.exports = {
     generateFileName,
     generateFileNameMultiple,
     deletePostController,
-    liekePostController,
+    likePostController,
     dislikePostController,
 };

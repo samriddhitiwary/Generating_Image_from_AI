@@ -17,7 +17,7 @@ const postRouter = require("./Api/routes/posts");
 
 const path = require("path");
 const {errorHandler} = require("./Api/middlewares/error");
-const verifyToken = require()
+const verifyToken = require("./Api/middlewares/verifyToken");
 
 const port = process.env.PORT || 3000;
 
@@ -25,7 +25,7 @@ mongoose.connect(process.env.MONGODB_URL)
 .then(() => console.log("DB Connection Successfull"));
 
 app.use(express.json());
-app.use(cookieParder());
+app.use(cookieParser());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use("/api/auth", authRouter);

@@ -7,7 +7,7 @@ const {createPostWithImagesController_V2,
     generateFileName,
     generateFileNameMultiple,
     deletePostController,
-    liekePostController,
+    likePostController,
     dislikePostController,} = require("../controllers/postController");
 const router = express.Router();
 
@@ -24,7 +24,7 @@ router.get("/user/:userId", getUserPostsController);
 
 router.delete("/user/:userId", deletePostController);
 
-router.post("/like/:postId", liekePostController);
+router.post("/like/:postId", likePostController);
 
 router.post("/dislike/:postId", dislikePostController);
 

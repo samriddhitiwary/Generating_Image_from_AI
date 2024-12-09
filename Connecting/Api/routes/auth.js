@@ -15,5 +15,5 @@ router.get("/logout",logoutController);
 // FETCH CURRENT USER
 router.get("/refetch",refetchController);
 
-module.export = router;
+module.exports = router;
 

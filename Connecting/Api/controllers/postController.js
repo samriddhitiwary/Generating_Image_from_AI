@@ -122,7 +122,7 @@ const createPostWithImagesController_V2 = async(req,res,next) => {
 
 const getPostController = async (req,res,next) => {
     try{
-        const allPost = await Post.find().populate("user", "username");
+        const allPosts = await Post.find().populate("user", "username");
         res.status(200).json({posts:allPosts});
     }catch(error){
         next(error);

@@ -1,7 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const {CustomError} = require("../middlewares.error");
+const {CustomError} = require("../middlewares/error");
 
  const registerController = async(req,res,next) =>{
     try{

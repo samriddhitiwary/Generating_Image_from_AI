@@ -28,6 +28,9 @@ import {
   PaymentProssing,
 } from "../Components/index";
 
+
+
+
 import { GET_AI_IMAGES, CHECK_AUTH } from "../Utils/index";
 
 const index = () => {
@@ -235,7 +238,7 @@ const index = () => {
 
                   <button
                     type="button"
-                    className="text-base absolure right-2 hover:bg-zinc-800 h-8 w-8 flex 
+                    className="text-base absolute right-2 hover:bg-zinc-800 h-8 w-8 flex 
                     items-center justify-center rounded-full"
                   >
                     <Image />
@@ -261,13 +264,13 @@ const index = () => {
               style={{
                 position: "relative",
               }}
-            >
+            />
               {openFilter && <Notic />}
 
               <div className="mb-8 flex flex-col item-center">
                 <div className="flex space-x-2">
                   <button
-                    className="w-32 sm:w-36 fle otem-center text-xs
+                    className="w-32 sm:w-36 flex item-center text-xs
                   justify-center text-center h-9 rounded-full
                    hover:brightness-110 bg-opacity-0 shadow-sm mt-4 bg-gradient-to-t 
                    from-indigo-900 via-indigo-800
@@ -310,6 +313,7 @@ const index = () => {
                   category={category}
                 />
               </div>
+              
               <div className="mt-2"></div>
               <div className="mt-3 relative px-2 md:px-7 w-full">
                 <div
@@ -339,7 +343,7 @@ const index = () => {
                   </>
                 </div>
               </div>
-            </div>
+            
           </div>
         </div>
       </div>

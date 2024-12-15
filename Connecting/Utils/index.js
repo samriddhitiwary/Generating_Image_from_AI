@@ -37,8 +37,7 @@ export const LOGIN_USER = async(login) =>{
     const {email, password} = signUp;
     if(!email || !password) 
         return "Data is missing";
-    if(password != confirmPassword)
-        return "Password not matching";
+   
 const response = await axios({
     method: "POST",
     url: "/api/auth/login",
@@ -174,15 +173,15 @@ export const IMAGE_GENERATOR_V3 = async(promptv3) =>{
 };
 
 
-export const IMAGE_GENERATOR_V2 = async(promptv3) =>{
+export const IMAGE_GENERATOR_V2 = async(promptv2) =>{
     const currentUser = await CHECK_AUTH();
 
-    const {prompt, negativePrompt, size, n} = promptv3;
+    const {prompt, negativePrompt, size, n} = promptv2;
 
     if(!prompt || !negativePrompt ||!size || !n){
         return "Data is missing";
     }
-    const LOWERCASE = style.toLowerCase();
+    
     
     const AIImage = await openai.images.generate({
         model: "dall-e-2",
@@ -243,7 +242,7 @@ export const GET_USER_AI_IMAGES = async(userId) =>{
     
     const response = await axios({
         method: "GET",
-        url: `/api/post/all/${userId}`,
+        url: `/api/post/user/${userId}`,
               
     });
    
@@ -289,7 +288,7 @@ export const BUYING_CREDIT = async(CREDIT) =>{
     const currentUser = await CHECK_AUTH();
     
     const response = await axios({
-        method: "DELETE",
+        method: "PUT",
         url: `/api/user/credit/${currentUser._id}`,
         withCredentials:true,
         data:{
